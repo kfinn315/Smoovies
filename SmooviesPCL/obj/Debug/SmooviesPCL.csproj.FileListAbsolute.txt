@@ -1,0 +1,7 @@
+C:\Users\kfinn\documents\visual studio 2015\Projects\Smoovies\SmooviesPCL\bin\Debug\SmooviesPCL.dll
+C:\Users\kfinn\documents\visual studio 2015\Projects\Smoovies\SmooviesPCL\bin\Debug\SmooviesPCL.pdb
+C:\Users\kfinn\documents\visual studio 2015\Projects\Smoovies\SmooviesPCL\obj\Debug\SmooviesPCL.dll
+C:\Users\kfinn\documents\visual studio 2015\Projects\Smoovies\SmooviesPCL\obj\Debug\SmooviesPCL.pdb
+C:\Users\kfinn\Documents\Visual Studio 2015\Projects\Smoovies\SmooviesPCL\obj\Debug\SmooviesPCL.csprojResolveAssemblyReference.cache
+C:\Users\kfinn\Documents\Visual Studio 2015\Projects\Smoovies\SmooviesPCL\obj\Debug\SmooviesPCL.dll.mdb
+C:\Users\kfinn\Documents\Visual Studio 2015\Projects\Smoovies\SmooviesPCL\bin\Debug\SmooviesPCL.dll.mdb

@@ -1,0 +1,12 @@
+Smoovies.DetailActivity, Smoovies;md5be5d2af6677f232451e2605bb87bd5e6.DetailActivity
+Smoovies.DetailActivity, Smoovies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5be5d2af6677f232451e2605bb87bd5e6.DetailActivity
+Smoovies.DetailActivity;md5be5d2af6677f232451e2605bb87bd5e6.DetailActivity
+smoovies.DetailActivity;md5be5d2af6677f232451e2605bb87bd5e6.DetailActivity
+Smoovies.HomeActivity, Smoovies;md5be5d2af6677f232451e2605bb87bd5e6.HomeActivity
+Smoovies.HomeActivity, Smoovies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5be5d2af6677f232451e2605bb87bd5e6.HomeActivity
+Smoovies.HomeActivity;md5be5d2af6677f232451e2605bb87bd5e6.HomeActivity
+smoovies.HomeActivity;md5be5d2af6677f232451e2605bb87bd5e6.HomeActivity
+Smoovies.MovieAdapter, Smoovies;md5be5d2af6677f232451e2605bb87bd5e6.MovieAdapter
+Smoovies.MovieAdapter, Smoovies, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5be5d2af6677f232451e2605bb87bd5e6.MovieAdapter
+Smoovies.MovieAdapter;md5be5d2af6677f232451e2605bb87bd5e6.MovieAdapter
+smoovies.MovieAdapter;md5be5d2af6677f232451e2605bb87bd5e6.MovieAdapter
