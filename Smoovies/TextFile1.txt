@@ -1,0 +1,201 @@
+﻿03-31 20:40:20.812: D/Mono(1766): DllImport searching in: '__Internal' ('(null)').
+03-31 20:40:20.812: D/Mono(1766): Searching for 'java_interop_jnienv_get_static_field_id'.
+03-31 20:40:20.812: D/Mono(1766): Probing 'java_interop_jnienv_get_static_field_id'.
+03-31 20:40:20.812: D/Mono(1766): Found as 'java_interop_jnienv_get_static_field_id'.
+03-31 20:40:20.814: D/Mono(1766): DllImport searching in: '__Internal' ('(null)').
+03-31 20:40:20.814: D/Mono(1766): Searching for 'java_interop_jnienv_get_static_object_field'.
+03-31 20:40:20.814: D/Mono(1766): Probing 'java_interop_jnienv_get_static_object_field'.
+03-31 20:40:20.814: D/Mono(1766): Found as 'java_interop_jnienv_get_static_object_field'.
+03-31 20:40:20.821: D/Mono(1766): DllImport searching in: '__Internal' ('(null)').
+03-31 20:40:20.821: D/Mono(1766): Searching for 'java_interop_jnienv_call_nonvirtual_boolean_method_a'.
+03-31 20:40:20.821: D/Mono(1766): Probing 'java_interop_jnienv_call_nonvirtual_boolean_method_a'.
+03-31 20:40:20.821: D/Mono(1766): Found as 'java_interop_jnienv_call_nonvirtual_boolean_method_a'.
+03-31 20:40:20.821: D/Mono(1766): [0x9e8bf930] hill climbing, change max number of threads 3
+03-31 20:40:20.850: D/GetNowPlaying(1766): GetNowPlaying received = {"page":1,"results":[{"poster_path":"\/tnmL0g604PDRJwGJ5fsUSYKFo9.jpg","adult":false,"overview":"A live-action adaptation of Disney's version of the classic 'Beauty and the Beast' tale of a cursed prince and a beautiful young woman who helps him break the spell.","release_date":"2017-03-15","genre_ids":[14,10402,10749],"id":321612,"original_title":"Beauty and the Beast","original_language":"en","title":"Beauty and the Beast","backdrop_path":"\/6aUWe0GSl69wMTSWWexsorMIvwU.jpg","popularity":191.297003,"vote_count":1037,"video":false,"vote_average":7.2},{"poster_path":"\/45Y1G5FEgttPAwjTYic6czC9xCn.jpg","adult":false,"overview":"In the near future, a weary Logan cares for an ailing Professor X in a hide out on the Mexican border. But Logan's attempts to hide from the world and his legacy are up-ended when a young mutant arrives, being pursued by dark forces.","release_date":"2017-02-28","genre_ids":[28,18,878],"id":263115,"original_title":"Logan","original_language":"en","title":"Logan","backdrop_path":"\/5pAGnkFYSsFJ99ZxDIYnhQbQFXs.jpg","popularity":128.872962,"vote_count":1958,"video":false,"vote_average":7.6},{"poster_path":"\/aoUyphk4nwffrwlZRaOa0eijgpr.jpg","adult":false,"overview":"Explore the mysterious and dangerous home of the king of the apes as a team of explorers ventures deep inside the treacherous, primordial island.","release_date":"2017-03-08","genre_ids":[878,28,12,14],"id":293167,"original_title":"Kong: Skull Island","original_language":"en","title":"Kong: Skull Island","backdrop_path":"\/pGwChWiAY1bdoxL79sXmaFBlYJH.jpg","popularity":60.329614,"vote_count":815,"video":false,"vote_average":6.1},{"poster_path":"\/h2mhfbEBGABSHo2vXG1ECMKAJa7.jpg","adult":false,"overview":"The six-member crew of the International Space Station is tasked with studying a sample from Mars that may be the first proof of extra-terrestrial life, which proves more intelligent than ever expected.","release_date":"2017-03-23","genre_ids":[27,878,53],"id":395992,"original_title":"Life","original_language":"en","title":"Life","backdrop_path":"\/3pTI3ExOIdhqfNDAPpaK0wbbvAK.jpg","popularity":31.971258,"vote_count":166,"video":false,"vote_average":6.3},{"poster_path":"\/nHXiMnWUAUba2LZ0dFkNDVdvJ1o.jpg","adult":false,"overview":"Vampire death dealer Selene fends off brutal attacks from both the Lycan clan and the Vampire faction that betrayed her. With her only allies, David and his father Thomas, she must stop the eternal war between Lycans and Vampires, even if it means she has to make the ultimate sacrifice.","release_date":"2016-11-28","genre_ids":[28,27],"id":346672,"original_title":"Underworld: Blood Wars","original_language":"en","title":"Underworld: Blood Wars","backdrop_path":"\/PIXSMakrO3s2dqA7mCvAAoVR0E.jpg","popularity":26.557501,"vote_count":1104,"video":false,"vote_average":4.9},{"poster_path":"\/rXMWOZiCt6eMX22jWuTOSdQ98bY.jpg","adult":false,"overview":"Though Kevin has evidenced 23 personalities to his trusted psychiatrist, Dr. Fletcher, there remains one still submerged who is set to materialize and dominate all the others. Compelled to abduct three teenage girls led by the willful, observant Casey, Kevin reaches a war for survival among all of those contained within him—as well as everyone around him—as the walls between his compartments shatter apart.","release_date":"2017-01-19","genre_ids":[27,53],"id":381288,"original_title":"Split","original_language":"en","title":"Split","backdrop_path":"\/4G6FNNLSIVrwSRZyFs91hQ3lZtD.jpg","popularity":25.465794,"vote_count":1474,"video":false,"vote_average":6.7},{"poster_path":"\/iRAZIEgfB9N0BObV0QI61Nxh92h.jpg","adult":false,"overview":"Saban's Power Rangers follows five ordinary teens who must become something extraordinary when they learn that their small town of Angel Grove — and the world — is on the verge of being obliterated by an alien threat. Chosen by destiny, our heroes quickly discover they are the only ones who can save the planet. But to do so, they will have to overcome their real-life issues and befor
+03-31 20:40:20.852: D/Mono(1766): Image addref System.Runtime.Serialization.Primitives[0xac04d5a0] -> System.Runtime.Serialization.Primitives.dll[0x9e8fa700]: 2
+03-31 20:40:20.852: D/Mono(1766): Prepared to set up assembly 'System.Runtime.Serialization.Primitives' (System.Runtime.Serialization.Primitives.dll)
+03-31 20:40:20.853: D/Mono(1766): Assembly System.Runtime.Serialization.Primitives[0xac04d5a0] added to domain RootDomain, ref_count=1
+03-31 20:40:20.853: D/Mono(1766): AOT module 'System.Runtime.Serialization.Primitives.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Serialization.Primitives.dll.so" not found
+03-31 20:40:20.854: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Runtime.Serialization.Primitives.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Serialization.Primitives.dll.so" not found
+03-31 20:40:20.854: D/Mono(1766): Config attempting to parse: 'System.Runtime.Serialization.Primitives.dll.config'.
+03-31 20:40:20.854: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Runtime.Serialization.Primitives/System.Runtime.Serialization.Primitives.config'.
+03-31 20:40:20.854: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Runtime.Serialization.Primitives[0xac04d5a0]: 2
+03-31 20:40:20.854: D/Mono(1766): Assembly Ref addref System.Runtime.Serialization.Primitives[0xac04d5a0] -> mscorlib[0xac04f340]: 16
+03-31 20:40:20.854: D/Mono(1766): Image addref System.Globalization[0xac04dea0] -> System.Globalization.dll[0x9e8f8400]: 2
+03-31 20:40:20.854: D/Mono(1766): Prepared to set up assembly 'System.Globalization' (System.Globalization.dll)
+03-31 20:40:20.854: D/Mono(1766): Assembly System.Globalization[0xac04dea0] added to domain RootDomain, ref_count=1
+03-31 20:40:20.854: D/Mono(1766): AOT module 'System.Globalization.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Globalization.dll.so" not found
+03-31 20:40:20.855: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Globalization.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Globalization.dll.so" not found
+03-31 20:40:20.855: D/Mono(1766): Config attempting to parse: 'System.Globalization.dll.config'.
+03-31 20:40:20.855: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Globalization/System.Globalization.config'.
+03-31 20:40:20.855: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Globalization[0xac04dea0]: 2
+03-31 20:40:20.855: D/Mono(1766): Assembly Ref addref System.Globalization[0xac04dea0] -> mscorlib[0xac04f340]: 17
+03-31 20:40:20.855: D/Mono(1766): Image addref System.IO[0xac04e380] -> System.IO.dll[0x9e8fb600]: 2
+03-31 20:40:20.855: D/Mono(1766): Prepared to set up assembly 'System.IO' (System.IO.dll)
+03-31 20:40:20.855: D/Mono(1766): Assembly System.IO[0xac04e380] added to domain RootDomain, ref_count=1
+03-31 20:40:20.856: D/Mono(1766): AOT module 'System.IO.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.IO.dll.so" not found
+03-31 20:40:20.862: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.IO.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.IO.dll.so" not found
+03-31 20:40:20.862: D/Mono(1766): Config attempting to parse: 'System.IO.dll.config'.
+03-31 20:40:20.862: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.IO/System.IO.config'.
+03-31 20:40:20.862: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.IO[0xac04e380]: 2
+03-31 20:40:20.862: D/Mono(1766): Assembly Ref addref System.IO[0xac04e380] -> mscorlib[0xac04f340]: 18
+03-31 20:40:20.863: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Collections[0xac04f8e0]: 4
+03-31 20:40:20.863: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Threading.Tasks[0xac04d180]: 3
+03-31 20:40:20.888: D/Mono(1766): Image addref System.Runtime.Extensions[0xac04e7a0] -> System.Runtime.Extensions.dll[0x9e8fbb00]: 2
+03-31 20:40:20.888: D/Mono(1766): Prepared to set up assembly 'System.Runtime.Extensions' (System.Runtime.Extensions.dll)
+03-31 20:40:20.888: D/Mono(1766): Assembly System.Runtime.Extensions[0xac04e7a0] added to domain RootDomain, ref_count=1
+03-31 20:40:20.889: D/Mono(1766): AOT module 'System.Runtime.Extensions.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Extensions.dll.so" not found
+03-31 20:40:20.889: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Runtime.Extensions.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Extensions.dll.so" not found
+03-31 20:40:20.889: D/Mono(1766): Config attempting to parse: 'System.Runtime.Extensions.dll.config'.
+03-31 20:40:20.889: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Runtime.Extensions/System.Runtime.Extensions.config'.
+03-31 20:40:20.889: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Runtime.Extensions[0xac04e7a0]: 2
+03-31 20:40:20.889: D/Mono(1766): Assembly Ref addref System.Runtime.Extensions[0xac04e7a0] -> mscorlib[0xac04f340]: 19
+03-31 20:40:20.913: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Threading[0xac04f700]: 3
+03-31 20:40:20.914: D/Mono(1766): Image addref System.Dynamic.Runtime[0xac04e8c0] -> System.Dynamic.Runtime.dll[0x9e447000]: 2
+03-31 20:40:20.914: D/Mono(1766): Prepared to set up assembly 'System.Dynamic.Runtime' (System.Dynamic.Runtime.dll)
+03-31 20:40:20.915: D/Mono(1766): Assembly System.Dynamic.Runtime[0xac04e8c0] added to domain RootDomain, ref_count=1
+03-31 20:40:20.915: D/Mono(1766): AOT module 'System.Dynamic.Runtime.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Dynamic.Runtime.dll.so" not found
+03-31 20:40:20.915: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Dynamic.Runtime.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Dynamic.Runtime.dll.so" not found
+03-31 20:40:20.915: D/Mono(1766): Config attempting to parse: 'System.Dynamic.Runtime.dll.config'.
+03-31 20:40:20.915: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Dynamic.Runtime/System.Dynamic.Runtime.config'.
+03-31 20:40:20.915: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Dynamic.Runtime[0xac04e8c0]: 2
+03-31 20:40:20.915: D/Mono(1766): Assembly Ref addref System.Dynamic.Runtime[0xac04e8c0] -> System.Core[0xac04f880]: 5
+03-31 20:40:20.916: D/Mono(1766): Image addref System.ObjectModel[0xac04e920] -> System.ObjectModel.dll[0x9e447500]: 2
+03-31 20:40:20.916: D/Mono(1766): Prepared to set up assembly 'System.ObjectModel' (System.ObjectModel.dll)
+03-31 20:40:20.916: D/Mono(1766): Assembly System.ObjectModel[0xac04e920] added to domain RootDomain, ref_count=1
+03-31 20:40:20.916: D/Mono(1766): AOT module 'System.ObjectModel.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.ObjectModel.dll.so" not found
+03-31 20:40:20.916: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.ObjectModel.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.ObjectModel.dll.so" not found
+03-31 20:40:20.916: D/Mono(1766): Config attempting to parse: 'System.ObjectModel.dll.config'.
+03-31 20:40:20.916: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.ObjectModel/System.ObjectModel.config'.
+03-31 20:40:20.916: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.ObjectModel[0xac04e920]: 2
+03-31 20:40:20.916: D/Mono(1766): Assembly Ref addref System.ObjectModel[0xac04e920] -> System[0xac04f7c0]: 5
+03-31 20:40:20.918: D/Mono(1766): Image addref System.Runtime.Serialization.Formatters[0xac04e9e0] -> System.Runtime.Serialization.Formatters.dll[0x9e447a00]: 2
+03-31 20:40:20.918: D/Mono(1766): Prepared to set up assembly 'System.Runtime.Serialization.Formatters' (System.Runtime.Serialization.Formatters.dll)
+03-31 20:40:20.918: D/Mono(1766): Assembly System.Runtime.Serialization.Formatters[0xac04e9e0] added to domain RootDomain, ref_count=1
+03-31 20:40:20.924: D/Mono(1766): AOT module 'System.Runtime.Serialization.Formatters.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Serialization.Formatters.dll.so" not found
+03-31 20:40:20.924: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Runtime.Serialization.Formatters.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Serialization.Formatters.dll.so" not found
+03-31 20:40:20.924: D/Mono(1766): Config attempting to parse: 'System.Runtime.Serialization.Formatters.dll.config'.
+03-31 20:40:20.924: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Runtime.Serialization.Formatters/System.Runtime.Serialization.Formatters.config'.
+03-31 20:40:20.924: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Runtime.Serialization.Formatters[0xac04e9e0]: 2
+03-31 20:40:20.924: D/Mono(1766): Assembly Ref addref System.Runtime.Serialization.Formatters[0xac04e9e0] -> mscorlib[0xac04f340]: 20
+03-31 20:40:20.926: D/Mono(1766): Image addref System.Runtime.Numerics[0xac04eaa0] -> System.Runtime.Numerics.dll[0x9e447f00]: 2
+03-31 20:40:20.926: D/Mono(1766): Prepared to set up assembly 'System.Runtime.Numerics' (System.Runtime.Numerics.dll)
+03-31 20:40:20.926: D/Mono(1766): Assembly System.Runtime.Numerics[0xac04eaa0] added to domain RootDomain, ref_count=1
+03-31 20:40:20.926: D/Mono(1766): AOT module 'System.Runtime.Numerics.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Numerics.dll.so" not found
+03-31 20:40:20.926: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Runtime.Numerics.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Numerics.dll.so" not found
+03-31 20:40:20.926: D/Mono(1766): Config attempting to parse: 'System.Runtime.Numerics.dll.config'.
+03-31 20:40:20.926: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Runtime.Numerics/System.Runtime.Numerics.config'.
+03-31 20:40:20.926: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Runtime.Numerics[0xac04eaa0]: 2
+03-31 20:40:20.927: D/Mono(1766): Image addref System.Numerics[0xac04eb00] -> System.Numerics.dll[0x9e448400]: 2
+03-31 20:40:20.927: D/Mono(1766): Prepared to set up assembly 'System.Numerics' (System.Numerics.dll)
+03-31 20:40:20.927: D/Mono(1766): Assembly System.Numerics[0xac04eb00] added to domain RootDomain, ref_count=1
+03-31 20:40:20.927: D/Mono(1766): AOT module 'System.Numerics.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Numerics.dll.so" not found
+03-31 20:40:20.927: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Numerics.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Numerics.dll.so" not found
+03-31 20:40:20.927: D/Mono(1766): Config attempting to parse: 'System.Numerics.dll.config'.
+03-31 20:40:20.927: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Numerics/System.Numerics.config'.
+03-31 20:40:20.927: D/Mono(1766): Assembly Ref addref System.Runtime.Numerics[0xac04eaa0] -> System.Numerics[0xac04eb00]: 2
+03-31 20:40:20.927: D/Mono(1766): Assembly Ref addref System.Numerics[0xac04eb00] -> mscorlib[0xac04f340]: 21
+03-31 20:40:20.928: D/Mono(1766): Assembly Ref addref System.Runtime[0xac04f580] -> System[0xac04f7c0]: 6
+03-31 20:40:20.933: D/Mono(1766): Unloading image System.Reflection.dll [0x9e448900].
+03-31 20:40:20.933: D/Mono(1766): Image addref System.Reflection[0xac04ece0] -> System.Reflection.dll[0x9fcca000]: 4
+03-31 20:40:20.933: D/Mono(1766): Config attempting to parse: 'System.Reflection.dll.config'.
+03-31 20:40:20.933: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Reflection/System.Reflection.config'.
+03-31 20:40:20.933: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Reflection[0xac04f6a0]: 3
+03-31 20:40:20.934: D/Mono(1766): Unloading image System.Linq.dll [0x9e448900].
+03-31 20:40:20.934: D/Mono(1766): Image addref System.Linq[0xac04ece0] -> System.Linq.dll[0x9fccc300]: 4
+03-31 20:40:20.934: D/Mono(1766): Config attempting to parse: 'System.Linq.dll.config'.
+03-31 20:40:20.934: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Linq/System.Linq.config'.
+03-31 20:40:20.934: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Linq[0xac04fb20]: 3
+03-31 20:40:20.938: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Reflection.Extensions[0xac04fa00]: 3
+03-31 20:40:20.951: D/Mono(1766): Image addref System.ComponentModel.TypeConverter[0xac066900] -> System.ComponentModel.TypeConverter.dll[0x9e449800]: 2
+03-31 20:40:20.951: D/Mono(1766): Prepared to set up assembly 'System.ComponentModel.TypeConverter' (System.ComponentModel.TypeConverter.dll)
+03-31 20:40:20.951: D/Mono(1766): Assembly System.ComponentModel.TypeConverter[0xac066900] added to domain RootDomain, ref_count=1
+03-31 20:40:20.952: D/Mono(1766): AOT module 'System.ComponentModel.TypeConverter.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.ComponentModel.TypeConverter.dll.so" not found
+03-31 20:40:20.952: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.ComponentModel.TypeConverter.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.ComponentModel.TypeConverter.dll.so" not found
+03-31 20:40:20.952: D/Mono(1766): Config attempting to parse: 'System.ComponentModel.TypeConverter.dll.config'.
+03-31 20:40:20.952: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.ComponentModel.TypeConverter/System.ComponentModel.TypeConverter.config'.
+03-31 20:40:20.952: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.ComponentModel.TypeConverter[0xac066900]: 2
+03-31 20:40:20.952: D/Mono(1766): Assembly Ref addref System.ComponentModel.TypeConverter[0xac066900] -> System[0xac04f7c0]: 7
+03-31 20:40:20.979: D/Mono(1766): Assembly Ref addref System.ObjectModel[0xac04e920] -> mscorlib[0xac04f340]: 22
+03-31 20:40:20.984: D/Mono(1766): Image addref System.Runtime.Serialization[0xac066a80] -> System.Runtime.Serialization.dll[0x9e449300]: 2
+03-31 20:40:20.984: D/Mono(1766): Prepared to set up assembly 'System.Runtime.Serialization' (System.Runtime.Serialization.dll)
+03-31 20:40:20.984: D/Mono(1766): Assembly System.Runtime.Serialization[0xac066a80] added to domain RootDomain, ref_count=1
+03-31 20:40:20.984: D/Mono(1766): AOT module 'System.Runtime.Serialization.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Serialization.dll.so" not found
+03-31 20:40:20.984: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Runtime.Serialization.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Runtime.Serialization.dll.so" not found
+03-31 20:40:20.984: D/Mono(1766): Config attempting to parse: 'System.Runtime.Serialization.dll.config'.
+03-31 20:40:20.984: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Runtime.Serialization/System.Runtime.Serialization.config'.
+03-31 20:40:20.984: D/Mono(1766): Assembly Ref addref System.Runtime.Serialization.Primitives[0xac04d5a0] -> System.Runtime.Serialization[0xac066a80]: 2
+03-31 20:40:20.985: D/Mono(1766): Assembly Ref addref System.Runtime.Serialization[0xac066a80] -> mscorlib[0xac04f340]: 23
+03-31 20:40:20.990: D/Mono(1766): Assembly Ref addref System.Core[0xac04f880] -> System[0xac04f7c0]: 8
+03-31 20:40:21.008: D/Mono(1766): Image addref System.Linq.Expressions[0xac066ae0] -> System.Linq.Expressions.dll[0x9e44a200]: 2
+03-31 20:40:21.008: D/Mono(1766): Prepared to set up assembly 'System.Linq.Expressions' (System.Linq.Expressions.dll)
+03-31 20:40:21.008: D/Mono(1766): Assembly System.Linq.Expressions[0xac066ae0] added to domain RootDomain, ref_count=1
+03-31 20:40:21.009: D/Mono(1766): AOT module 'System.Linq.Expressions.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Linq.Expressions.dll.so" not found
+03-31 20:40:21.009: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Linq.Expressions.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Linq.Expressions.dll.so" not found
+03-31 20:40:21.009: D/Mono(1766): Config attempting to parse: 'System.Linq.Expressions.dll.config'.
+03-31 20:40:21.009: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Linq.Expressions/System.Linq.Expressions.config'.
+03-31 20:40:21.009: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Linq.Expressions[0xac066ae0]: 2
+03-31 20:40:21.009: D/Mono(1766): Assembly Ref addref System.Linq.Expressions[0xac066ae0] -> System.Core[0xac04f880]: 6
+03-31 20:40:21.113: D/Mono(1766): Unloading image System.Diagnostics.Debug.dll [0x9e44b100].
+03-31 20:40:21.113: D/Mono(1766): Image addref System.Diagnostics.Debug[0xac066a20] -> System.Diagnostics.Debug.dll[0x9fccaa00]: 4
+03-31 20:40:21.113: D/Mono(1766): Config attempting to parse: 'System.Diagnostics.Debug.dll.config'.
+03-31 20:40:21.113: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Diagnostics.Debug/System.Diagnostics.Debug.config'.
+03-31 20:40:21.113: D/Mono(1766): Assembly Ref addref SmooviesPCL[0xac04f460] -> System.Diagnostics.Debug[0xac04f760]: 3
+03-31 20:40:21.113: D/Mono(1766): Assembly Ref addref System.Diagnostics.Debug[0xac04f760] -> mscorlib[0xac04f340]: 24
+03-31 20:40:21.141: D/Mono(1766): Image addref System.Reflection.Primitives[0xac066d20] -> System.Reflection.Primitives.dll[0x9d79a500]: 2
+03-31 20:40:21.141: D/Mono(1766): Prepared to set up assembly 'System.Reflection.Primitives' (System.Reflection.Primitives.dll)
+03-31 20:40:21.141: D/Mono(1766): Assembly System.Reflection.Primitives[0xac066d20] added to domain RootDomain, ref_count=1
+03-31 20:40:21.142: D/Mono(1766): AOT module 'System.Reflection.Primitives.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Reflection.Primitives.dll.so" not found
+03-31 20:40:21.142: D/Mono(1766): AOT module '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/lib/mono/aot-cache/x86/System.Reflection.Primitives.dll.so' not found: dlopen failed: library "/data/app/com.Smoovies-1/lib/x86/libaot-System.Reflection.Primitives.dll.so" not found
+03-31 20:40:21.142: D/Mono(1766): Config attempting to parse: 'System.Reflection.Primitives.dll.config'.
+03-31 20:40:21.142: D/Mono(1766): Config attempting to parse: '/Users/builder/data/lanes/4009/3a62f1ea/source/monodroid/builds/install/mono-x86/etc/mono/assemblies/System.Reflection.Primitives/System.Reflection.Primitives.config'.
+03-31 20:40:21.142: D/Mono(1766): Assembly Ref addref Newtonsoft.Json[0xac04f400] -> System.Reflection.Primitives[0xac066d20]: 2
+03-31 20:40:21.142: D/Mono(1766): Assembly Ref addref System.Reflection.Primitives[0xac066d20] -> mscorlib[0xac04f340]: 25
+03-31 20:40:21.310: D/Mono(1766): Assembly Ref addref System.Collections[0xac04f8e0] -> System.Core[0xac04f880]: 7
+03-31 20:40:21.373: D/GetNowPlaying(1766): Returning count=20
+03-31 20:40:21.373: D/Home(1766): Got newMovies: 20
+03-31 20:40:21.395: D/Mono(1766): DllImport searching in: '__Internal' ('(null)').
+03-31 20:40:21.395: D/Mono(1766): Searching for 'java_interop_jnienv_call_boolean_method_a'.
+03-31 20:40:21.395: D/Mono(1766): Probing 'java_interop_jnienv_call_boolean_method_a'.
+03-31 20:40:21.395: D/Mono(1766): Found as 'java_interop_jnienv_call_boolean_method_a'.
+03-31 20:40:21.441: D/GetView(1766): Position=0
+03-31 20:40:21.453: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.455: D/GetView(1766): Position=1
+03-31 20:40:21.456: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.456: D/GetView(1766): Position=2
+03-31 20:40:21.457: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.457: D/GetView(1766): Position=3
+03-31 20:40:21.458: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.458: D/GetView(1766): Position=4
+03-31 20:40:21.459: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.459: D/GetView(1766): Position=5
+03-31 20:40:21.459: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.460: D/GetView(1766): Position=6
+03-31 20:40:21.460: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.461: D/GetView(1766): Position=7
+03-31 20:40:21.461: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.461: D/GetView(1766): Position=8
+03-31 20:40:21.462: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.462: D/GetView(1766): Position=9
+03-31 20:40:21.463: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.463: D/GetView(1766): Position=10
+03-31 20:40:21.464: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.464: D/GetView(1766): Position=11
+03-31 20:40:21.464: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.465: D/GetView(1766): Position=12
+03-31 20:40:21.465: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.465: D/GetView(1766): Position=13
+03-31 20:40:21.466: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.466: D/GetView(1766): Position=14
+03-31 20:40:21.467: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.467: D/GetView(1766): Position=15
+03-31 20:40:21.467: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.468: D/GetView(1766): Position=16
+03-31 20:40:21.468: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.468: D/GetView(1766): Position=17
+03-31 20:40:21.469: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.469: D/GetView(1766): Position=18
+03-31 20:40:21.470: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:21.470: D/GetView(1766): Position=19
+03-31 20:40:21.471: D/GetView(1766): Exception Binary XML file line #1: addView(View, LayoutParams) is not supported in AdapterView
+03-31 20:40:55.431: D/Mono(1766): [0x9e73f930] worker finishing

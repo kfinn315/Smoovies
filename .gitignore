@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Smoovies/obj/.cache
+/Smoovies/bin/Debug/com.Smoovies-Signed.apk
+/Smoovies/bin/Debug/System.Numerics.dll.mdb
+/Smoovies/bin/Debug/System.Runtime.Serialization.Primitives.dll.mdb
+*.apk
+*.dll

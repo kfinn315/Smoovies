@@ -12,17 +12,16 @@ using Android.Widget;
 
 namespace Smoovies
 {
-    [Activity(Label = "DetailActivity")]
-    public class DetailActivity : Activity
+    [Activity(Label = "Splash")]
+    public class Splash : Activity
     {
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.ActivityDetail);
-            
+            SetContentView(Resource.Layout.splash);
 
+            // Create your application here
         }
     }
 }

@@ -9,6 +9,10 @@ namespace SmooviesPCL.Models
 {
     public class Response
     {
+        public Response()
+        {
+            results = new List<Movie>();
+        }
         public int page { get; set; }
 
         public List<Movie> results{ get; set; }
@@ -17,5 +21,10 @@ namespace SmooviesPCL.Models
 
         public int total_results{ get; set; }
 
+
+        public override string ToString()
+        {
+            return "total_results: " + total_results + "\ntotal_pages " + total_pages + ((results != null) ? "results count:" + results.Count : "results: NULL");
+        }
     }
 }

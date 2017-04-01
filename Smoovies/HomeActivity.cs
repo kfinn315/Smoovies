@@ -10,42 +10,48 @@ using Android.Views;
 using Java.Lang;
 using System;
 using Android.Content;
+using Android.Util;
 
 namespace Smoovies
 {
-    [Activity(Label = "Smoovies", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "HomeActivity", Icon = "@drawable/icon", Name = "com.Smoovies.HomeActivity", MainLauncher =true)]
     public class HomeActivity : Activity
     {
         private MovieAPI movieAPI;
         List<Movie> savedMovies;
         List<Movie> popularMovies;
-        List < Movie > newMovies;
+        List<Movie> newMovies;
         List<Movie> goodMovies;
+        ListView newListView;
 
-        protected override void OnCreate(Bundle bundle)
+        protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             SetContentView(Resource.Layout.ActivityHome);
+            TextView tv = this.FindViewById<TextView>(Resource.Id.tv);
+            tv.Text = "connected";
 
-            movieAPI = new MovieAPI(new Http());
+             newListView = this.FindViewById<ListView>(Resource.Id.listNowPlaying);
+             newListView.ItemClick += NewListView_ItemClick;
 
-            ListView popularListView = this.FindViewById<ListView>(Resource.Id.listPopular);
-            ListView newListView = this.FindViewById<ListView>(Resource.Id.listNowPlaying);
-            ListView goodListView = this.FindViewById<ListView>(Resource.Id.listTopRated);         
+            movieAPI = new MovieAPI();
+            await movieAPI.GetConfig();
+        }
 
-           savedMovies = GetSavedMovies();
-           popularMovies = movieAPI.GetPopular();
-           newMovies = movieAPI.GetNowPlaying();
-           goodMovies = movieAPI.GetTopRated();
+        protected override async void OnStart()
+        {
+            base.OnStart();
+            
+            newMovies = await movieAPI.GetNowPlaying();
 
-            popularListView.Adapter = new MovieAdapter(this, popularMovies);
-            newListView.Adapter = new MovieAdapter(this, newMovies);
-            goodListView.Adapter = new MovieAdapter(this, goodMovies);
+            Log.Debug("Home", "Got newMovies: " + newMovies.Count);
+            newListView.Adapter = new MovieAdapter(this, newMovies );
 
-            popularListView.ItemClick += MovieList_Click;
-            newListView.ItemClick += MovieList_Click;
-            goodListView.ItemClick += MovieList_Click;
+        }
+
+        private void NewListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            LaunchDetailsActivity((int)e.View.Tag);
         }
 
         private void LaunchDetailsActivity(int id)
@@ -55,10 +61,10 @@ namespace Smoovies
             StartActivity(intent);
         }
 
-        private void MovieList_Click(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            LaunchDetailsActivity((int)e.Parent.GetItemAtPosition(e.Position));
-        }
+        //private void MovieList_Click(object sender, AdapterView.ItemClickEventArgs e)
+        //{
+        //    LaunchDetailsActivity((int)e.Parent.GetItemAtPosition(e.Position));
+        //}
 
         private List<Movie> GetSavedMovies()
         {
@@ -66,28 +72,6 @@ namespace Smoovies
         }
     }
 
-    public class MovieAdapter : ArrayAdapter<Movie>
-    {
-        List<Movie> _movies;
-        Context _context;
-        public MovieAdapter(Context context, List<Movie> movies) : base(context, 0)
-        {
-            _context = context;
-            _movies = movies;
-        }
-     
-        public override View GetView(int position, View convertView, ViewGroup parent)
-        {
-            if (convertView == null)
-            {
-                convertView = LayoutInflater.From(_context).Inflate(Resource.Layout.MovieTile, parent);
-            }
-
-            ImageView iv = convertView.FindViewById<ImageView>(Resource.Id.ivMovie);
-            iv.SetImageURI((Android.Net.Uri)_movies[position].poster_path); //???
-
-            return convertView;
-        }        
-    }
+    
 }
 

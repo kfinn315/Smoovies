@@ -12,5 +12,10 @@
         public string backdrop_path { get; set; }
         public string poster_path { get; set; }
         public bool video { get; set; }
+
+        public override string ToString()
+        {
+            return "title: " + title + "\nid: " + id + "\noverview: " + overview;
+        }
     }
 }

@@ -60,53 +60,53 @@ namespace Smoovies
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050005
-			public const int btnFav = 2131034117;
+			// aapt resource value: 0x7f050008
+			public const int btnFav = 2131034120;
 			
-			// aapt resource value: 0x7f050004
-			public const int btnPlay = 2131034116;
+			// aapt resource value: 0x7f050009
+			public const int btnPlay = 2131034121;
 			
-			// aapt resource value: 0x7f05000f
-			public const int ivMovie = 2131034127;
+			// aapt resource value: 0x7f05000e
+			public const int ivMovie = 2131034126;
 			
 			// aapt resource value: 0x7f050001
 			public const int ivPoster = 2131034113;
 			
-			// aapt resource value: 0x7f050009
-			public const int ivSimilar1 = 2131034121;
-			
-			// aapt resource value: 0x7f05000a
-			public const int ivSimilar2 = 2131034122;
-			
-			// aapt resource value: 0x7f05000b
-			public const int ivSimilar3 = 2131034123;
-			
-			// aapt resource value: 0x7f05000e
-			public const int listNowPlaying = 2131034126;
-			
-			// aapt resource value: 0x7f05000d
-			public const int listPopular = 2131034125;
-			
-			// aapt resource value: 0x7f05000c
-			public const int listTopRated = 2131034124;
-			
-			// aapt resource value: 0x7f050008
-			public const int llSimilar = 2131034120;
+			// aapt resource value: 0x7f050005
+			public const int ivSimilar1 = 2131034117;
 			
 			// aapt resource value: 0x7f050006
-			public const int tvDescr = 2131034118;
+			public const int ivSimilar2 = 2131034118;
+			
+			// aapt resource value: 0x7f050007
+			public const int ivSimilar3 = 2131034119;
+			
+			// aapt resource value: 0x7f05000d
+			public const int listNowPlaying = 2131034125;
+			
+			// aapt resource value: 0x7f050004
+			public const int llSimilar = 2131034116;
+			
+			// aapt resource value: 0x7f05000c
+			public const int tv = 2131034124;
+			
+			// aapt resource value: 0x7f050003
+			public const int tvDescr = 2131034115;
 			
 			// aapt resource value: 0x7f050002
 			public const int tvReleaseDate = 2131034114;
 			
-			// aapt resource value: 0x7f050007
-			public const int tvSimilar = 2131034119;
+			// aapt resource value: 0x7f05000b
+			public const int tvSimilar = 2131034123;
 			
 			// aapt resource value: 0x7f050000
 			public const int tvTitle = 2131034112;
 			
-			// aapt resource value: 0x7f050003
-			public const int tvVotes = 2131034115;
+			// aapt resource value: 0x7f05000f
+			public const int tvTitle1 = 2131034127;
+			
+			// aapt resource value: 0x7f05000a
+			public const int tvVotes = 2131034122;
 			
 			static Id()
 			{
@@ -132,6 +132,9 @@ namespace Smoovies
 			
 			// aapt resource value: 0x7f030003
 			public const int MovieTile = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int splash = 2130903044;
 			
 			static Layout()
 			{
