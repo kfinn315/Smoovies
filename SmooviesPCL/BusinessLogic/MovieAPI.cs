@@ -33,6 +33,10 @@ namespace SmooviesPCL.BusinessLogic
         {            
             return APIConfig.Images.base_url+APIConfig.Images.poster_sizes[size]+id+"?api_key=" + apiKey;
         }
+        public static string GetBGImageURL(string id, int size)
+        {
+            return APIConfig.Images.base_url + APIConfig.Images.backdrop_sizes[size] + id + "?api_key=" + apiKey;
+        }
         public async Task<List<Movie>> GetNowPlaying()
         {
             string action = "now_playing";

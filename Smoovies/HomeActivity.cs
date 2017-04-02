@@ -11,6 +11,7 @@ using Java.Lang;
 using System;
 using Android.Content;
 using Android.Util;
+using Newtonsoft.Json;
 
 namespace Smoovies
 {
@@ -51,14 +52,14 @@ namespace Smoovies
 
         private void NewListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            LaunchDetailsActivity((int)e.View.Tag);
+            Intent intent = new Intent(this, typeof(DetailActivity));
+            intent.PutExtra("movie", JsonConvert.SerializeObject(newMovies[e.Position]));
+            StartActivity(intent);
         }
 
-        private void LaunchDetailsActivity(int id)
+        private void LaunchDetailsActivity(object movie)
         {
-            Intent intent = new Intent(this, typeof(DetailActivity));
-            intent.PutExtra("id", id);
-            StartActivity(intent);
+           
         }
 
         //private void MovieList_Click(object sender, AdapterView.ItemClickEventArgs e)

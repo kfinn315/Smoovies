@@ -67,8 +67,6 @@ namespace Smoovies.Core
                 TextView tv = convertView.FindViewById<TextView>(Resource.Id.tvTitle1);
                 tv.Text = movie.title;
 
-                convertView.Tag = movie.id;
-
                 return convertView;
             }
             catch (Exception e)
@@ -85,7 +83,7 @@ namespace Smoovies.Core
         }
     }
 
-    class IVCallback : Java.Lang.Object, ICallback
+    public class IVCallback : Java.Lang.Object, ICallback
     {
         int _position = -1;
         public IVCallback(int position)
@@ -102,4 +100,6 @@ namespace Smoovies.Core
             Log.Info("IVCallback", "OnSuccess "+_position);
         }
     }
+
+
 }

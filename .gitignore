@@ -6,5 +6,10 @@
 /Smoovies/bin/Debug/com.Smoovies-Signed.apk
 /Smoovies/bin/Debug/System.Numerics.dll.mdb
 /Smoovies/bin/Debug/System.Runtime.Serialization.Primitives.dll.mdb
+/Smoovies/bin/*
+/Smoovies/obj/*
+/SmooviesPCL/bin/*
+/SmooviesPCL/bin/*
 *.apk
 *.dll
+*.xml
