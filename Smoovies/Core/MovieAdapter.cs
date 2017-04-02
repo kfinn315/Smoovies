@@ -13,15 +13,19 @@ using SmooviesPCL.Models;
 using Android.Util;
 using SmooviesPCL.BusinessLogic;
 using Square.Picasso;
+using Android.Support.V7.Widget;
 
 namespace Smoovies.Core
 {
-    public class MovieAdapter : BaseAdapter<Movie>
+    public class MovieAdapter : RecyclerView.Adapter
     {
         List<Movie> _movies;
         Context _context;
+        int _itemWidth;
 
-        public override int Count
+        public event EventHandler<int> ItemClick;
+
+        public override int ItemCount
         {
             get
             {
@@ -29,57 +33,68 @@ namespace Smoovies.Core
             }
         }
 
-        public override Movie this[int position]
+        void OnClick(int position)
         {
-            get
-            {
-                return _movies[position];
-            }
+            if (ItemClick != null)
+                ItemClick(this, position);
         }
 
-        public MovieAdapter(Context context, List<Movie> movies) : base()
+        public MovieAdapter(Context context, List<Movie> movies, int itemWidth) : base()
         {
             _context = context;
             _movies = movies;
-
+            _itemWidth = itemWidth;
         }
 
-        public override View GetView(int position, View convertView, ViewGroup parent)
+
+        public override long GetItemId(int position)
+        {
+            return position;
+        }
+
+        public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             try
             {
-
                 Log.Debug("GetView", "Position=" + position);
-                if (convertView == null)
-                {
-                    convertView = LayoutInflater.From(_context).Inflate(Resource.Layout.MovieTile, null);
-                }
-
-                ImageView iv = convertView.FindViewById<ImageView>(Resource.Id.ivMovie);
+                MovieViewHolder vh = (MovieViewHolder)holder;
 
                 Movie movie = _movies[position];
 
                 Log.Debug("GetView", movie.ToString());
                 string strURI = MovieAPI.GetImageURL(movie.poster_path, 0);
                 Android.Net.Uri posteruri = Android.Net.Uri.Parse(strURI);
-                Picasso.With(_context).Load(posteruri).Into(iv, new IVCallback(position));
-
-                TextView tv = convertView.FindViewById<TextView>(Resource.Id.tvTitle1);
-                tv.Text = movie.title;
-
-                return convertView;
+                Picasso.With(_context).Load(posteruri).Into(vh.ivPoster, new IVCallback(position));
+                
             }
             catch (Exception e)
             {
                 Log.Debug("GetView", "Exception " + e.Message);
             }
-
-            return new View(_context);
         }
 
-        public override long GetItemId(int position)
+        public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            return position;
+
+            View itemView = LayoutInflater.From(_context).Inflate(Resource.Layout.MovieTile, parent, false);
+
+            ImageView ivMovie = itemView.FindViewById<ImageView>(Resource.Id.ivMovie);
+            ViewGroup.LayoutParams llParams = ivMovie.LayoutParameters;
+            llParams.Width = _itemWidth;
+            ivMovie.LayoutParameters = llParams;
+            MovieViewHolder vh = new MovieViewHolder(itemView, OnClick);
+            return vh;
+        }
+    }
+
+    public class MovieViewHolder : RecyclerView.ViewHolder
+    {
+        public ImageView ivPoster { get; private set; }
+
+        public MovieViewHolder(View itemView, Action<int> listener) : base(itemView)
+        {
+            ivPoster = itemView.FindViewById<ImageView>(Resource.Id.ivMovie);
+            itemView.Click += (sender, e) => listener(base.Position);
         }
     }
 
@@ -92,12 +107,12 @@ namespace Smoovies.Core
         }
         public void OnError()
         {
-            Log.Info("IVCallback", "OnError "+_position);
+            Log.Info("IVCallback", "OnError " + _position);
         }
 
         public void OnSuccess()
         {
-            Log.Info("IVCallback", "OnSuccess "+_position);
+            Log.Info("IVCallback", "OnSuccess " + _position);
         }
     }
 

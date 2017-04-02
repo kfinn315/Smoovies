@@ -39,7 +39,7 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="IHttp.cs" />
     <Compile Include="Models\Response.cs" />
-    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\VideoResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

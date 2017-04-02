@@ -40,59 +40,97 @@ namespace SmooviesPCL.BusinessLogic
         public async Task<List<Movie>> GetNowPlaying()
         {
             string action = "now_playing";
-            List<Movie> movies = new List<Movie>();
-            try
-            {
-                string url = baseURL+"movie" +"/"+ action + "?api_key=" + apiKey + "&sort_by=popularity.des";
-                Log.Debug("GetNowPlaying", "url = "+url);
 
-                HttpResponseMessage responseMsg = await client.GetAsync(url);
-                string content = await responseMsg.Content.ReadAsStringAsync();
-                Log.Debug("GetNowPlaying", "GetNowPlaying received = " + content);
-
-                Response response = JsonConvert.DeserializeObject<Response>(content);
-                Log.Debug("GetNowPlaying", "Response " + response.ToString());
-
-                movies = response.results;
-            }
-            catch (Exception ex) {
-                Log.Debug("GetNowPlaying", "Exception "+ex.Message);
-            }
+            Log.Debug("MovieAPI","GETNOWPLAYING()");
+            List<Movie> movies = await GetMovies(action);
 
             Log.Debug("GetNowPlaying", "Returning count="+movies.Count);
             return movies;
         }
+        private async Task<List<Movie>> GetMovies(string action, int id = -1)
+        {
+            List<Movie> movies = new List<Movie>();
+            try
+            {
+                string url = baseURL + "movie" + "/"+ (id!=-1?(id+"/"):"") + action + "?api_key=" + apiKey + "&sort_by=popularity.des";
+                Log.Debug("MovieAPI", "url = " + url);
 
-        //public List<Movie> GetTopRated()
-        //{
-        //    string action = "top_rated";
-        //    string list = _http.GET(baseURL+action+"?api_key="+apiKey+"&sort_by=popularity.des");
+                HttpResponseMessage responseMsg = await client.GetAsync(url);
+                string content = await responseMsg.Content.ReadAsStringAsync();
 
-        //    return new List<Movie>();
-        //}
+                Response response = JsonConvert.DeserializeObject<Response>(content);
 
-        //public List<Movie> GetPopular()
-        //{
-        //    string action = "popular";
-        //    string list = _http.GET(baseURL + action + "?api_key="+apiKey+"&sort_by=popularity.des");
+                Log.Debug("MovieAPI", "Response " + response.ToString());
 
-        //    return new List<Movie>();
-        //}
+                movies = response.results;
+            }
+            catch (Exception ex)
+            {
+                Log.Debug("MovieAPI", "Exception " + ex.Message);
+            }
 
-        //public List<Movie> GetSimilar(int id)
-        //{
-        //    string action = "/similar";
-        //    string list = _http.GET(baseURL + id.ToString() + action+"?api_key="+apiKey+"&sort_by=popularity.des");
+            return movies;
+        }
+      
 
-        //    return new List<Movie>();
-        //}
+        public async Task<List<Movie>> GetTopRated()
+        {
+            string action = "top_rated";
 
-        //public List<Video> GetVideo(int id)
-        //{
-        //    string action = "/videos";
-        //    string result = _http.GET(baseURL + id.ToString() + action + "?api_key="+apiKey+"&sort_by=popularity.des");
+            Log.Debug("MovieAPI", "GETTOPRATED()");
+            List<Movie> movies = await GetMovies(action);
 
-        //    return new VideoResult().results;
-        //}
+            Log.Debug("GetNowPlaying", "Returning count=" + movies.Count);
+            return movies;
+        }
+
+        public async Task<List<Movie>> GetPopular()
+        {
+            string action = "popular";
+
+            Log.Debug("MovieAPI", "GETPOPULAR()");
+            List<Movie> movies = await GetMovies(action);
+
+            Log.Debug("GetNowPlaying", "Returning count=" + movies.Count);
+            return movies;
+        }
+
+        public async Task<List<Movie>> GetSimilar(int id)
+        {
+            string action = "similar";
+
+            Log.Debug("MovieAPI", "GET SIMILAR()");
+            List<Movie> movies = await GetMovies(action, id);
+
+            Log.Debug("GetNowPlaying", "Returning count=" + movies.Count);
+            return movies;
+        }
+
+        public async Task<List<Video>> GetVideos(int id)
+        {
+            string action = "/videos";
+
+            List<Video> movies = new List<Video>();
+            try
+            {
+                string url = baseURL + "movie/"+id.ToString() + action + "?api_key=" + apiKey + "&sort_by=popularity.des";
+                Log.Debug("MovieAPI", "url = " + url);
+
+                HttpResponseMessage responseMsg = await client.GetAsync(url);
+                string content = await responseMsg.Content.ReadAsStringAsync();
+
+                VideoResponse response = JsonConvert.DeserializeObject<VideoResponse>(content);
+
+                Log.Debug("MovieAPI", "Response " + response.ToString());
+
+                movies = response.results;
+            }
+            catch (Exception ex)
+            {
+                Log.Debug("MovieAPI", "Exception " + ex.Message);
+            }
+
+            return movies;
+        }
     }
 }

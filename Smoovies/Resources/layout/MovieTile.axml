@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:id="@+id/llTile"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
     <ImageView
         android:id="@+id/ivMovie"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        />
-    <TextView
-        android:id="@+id/tvTitle1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Title" />
+        android:layout_height="fill_parent"
+        android:background="#ffffff" />
 </LinearLayout>

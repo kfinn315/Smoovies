@@ -3,24 +3,35 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TextView android:text="test"
-            android:id="@+id/tv"
+    <TextView
+        android:text="Top Rated"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-            />
-  <!-- <ListView
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/listTopRated"
+        android:scrollbars="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-   <ListView
+    <TextView
+        android:text="Popular"
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/listPopular"
+        android:scrollbars="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
-    -->
-      <ListView
-        android:id="@+id/listNowPlaying"
+    <TextView
+        android:text="Now Playing"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listNowPlaying"
+        android:scrollbars="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 </LinearLayout>
