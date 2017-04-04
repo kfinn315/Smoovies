@@ -21,8 +21,6 @@ namespace Smoovies
     [Activity(Label = "Home", Icon = "@drawable/icon", Name = "com.Smoovies.HomeActivity")]
     public class HomeActivity : Activity
     {
-        private MovieAPI movieAPI;
-
         //List<Movie> nowMovies;
         //List<Movie> topMovies;
         //List<Movie> popMovies;
@@ -40,15 +38,10 @@ namespace Smoovies
 
         FavoriteDatasource datasource;
 
-        protected override async void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.ActivityHome);
-
-            movieAPI = new MovieAPI();
-
-            //TODO save in SharedPrefs
-            await movieAPI.GetConfig();
 
             topListView = this.FindViewById<RecyclerView>(Resource.Id.listTopRated);
             popListView = this.FindViewById<RecyclerView>(Resource.Id.listPopular);
@@ -72,18 +65,24 @@ namespace Smoovies
             popListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
             nowListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
 
-            
-            favAdapter = new MovieAdapter(this, MovieLists.FavMovies);
-            favListView.SetAdapter(favAdapter);
-            favAdapter.ItemClick += FavAdapter_ItemClick;
-            favListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
-
-            datasource = new FavoriteDatasource(Constants.dbFavPath);
         }
 
-        protected override void OnStart()
+        protected async override void OnStart()
         {
-            base.OnStart();            
+            base.OnStart();
+
+            datasource = new FavoriteDatasource(Constants.dbFavPath);
+
+            MovieLists.FavMovies = await datasource.GetFavorites();
+
+            RunOnUiThread(() =>
+            {
+                favAdapter = new MovieAdapter(this, MovieLists.FavMovies);
+
+                favListView.SetAdapter(favAdapter);
+                favAdapter.ItemClick += FavAdapter_ItemClick;
+                favListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
+            });
         }
 
         private void FavAdapter_ItemClick(object sender, int e)

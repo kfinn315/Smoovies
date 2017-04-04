@@ -105,7 +105,13 @@ namespace Smoovies
                 listSimilar.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
                 listSimilar.SetAdapter(similarAdapter);
             });
+
             isFav = await datasource.IsFavorite(movie.id.ToString());
+
+            RunOnUiThread(() =>
+            {
+                setBtnFavText();
+            });
 
         }
 
@@ -115,13 +121,6 @@ namespace Smoovies
             intent.PutExtra("movie", JsonConvert.SerializeObject(SimilarMovies[e]));
             intent.AddFlags(ActivityFlags.ReorderToFront | ActivityFlags.ClearTop);
             StartActivity(intent);
-        }
-
-        protected override void OnResume()
-        {
-            base.OnResume();
-
-            setBtnFavText();
         }
 
         private void setBtnFavText()

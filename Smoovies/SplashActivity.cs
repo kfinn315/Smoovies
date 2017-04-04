@@ -62,6 +62,9 @@ namespace Smoovies
             MovieLists.NowMovies = await api.GetNowPlaying();
             incrementProgBar(25);
 
+            await api.GetConfig();
+            incrementProgBar(25);
+
             FavoriteDatasource datasource = new FavoriteDatasource(Constants.dbFavPath);
 
             MovieLists.FavMovies = await datasource.GetFavorites();
