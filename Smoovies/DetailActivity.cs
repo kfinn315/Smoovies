@@ -16,10 +16,12 @@ using Smoovies.Core;
 using Android.Util;
 using SmooviesPCL.BusinessLogic;
 using Android.Support.V7.Widget;
+using SmooviesPCL;
+using System.IO;
 
 namespace Smoovies
 {
-    [Activity(Label = "DetailActivity")]
+    [Activity(Label = "Detail")]
     public class DetailActivity : Activity
     {
         ImageView ivBG, ivPoster;
@@ -27,7 +29,11 @@ namespace Smoovies
         Button btnFav, btnPlay;
         RatingBar ratingScore;
         RecyclerView listSimilar;
+        MovieAPI api;
 
+        FavoriteDatasource datasource;
+
+        List<Movie> SimilarMovies;
         Movie movie;
         bool isFav;
 
@@ -61,41 +67,80 @@ namespace Smoovies
                 Log.Debug("DetailActivity", "OnCreate exception " + ex.Message);
             }
 
+            datasource = new FavoriteDatasource(Constants.dbFavPath);
+
+
         }
 
         protected async override void OnStart()
         {
             base.OnStart();
 
-            string url = SmooviesPCL.BusinessLogic.MovieAPI.GetImageURL(movie.poster_path, 0);
+            string url = MovieAPI.GetImageURL(movie.poster_path, 0);
             Picasso.With(this).Load(url).Into(ivPoster, new IVCallback(movie.id));
 
-            string urlbg = SmooviesPCL.BusinessLogic.MovieAPI.GetBGImageURL(movie.backdrop_path, 0);
+            string urlbg = MovieAPI.GetBGImageURL(movie.backdrop_path, 0);
             Picasso.With(this).Load(urlbg).Into(ivBG, new IVCallback(-1));
 
             tvTitle.Text = movie.title;
             tvDescr.Text = movie.overview;
-            tvReleaseDate.Text = "Release Date: "+movie.release_date;
-            tvVotes.Text = "(from "+movie.vote_count.ToString()+" votes)";
 
-            ratingScore.Rating = movie.vote_average;
+            tvReleaseDate.Text = "Release Date: " + movie.release_date;
+
+            ratingScore.Rating = movie.vote_average/2;
+            tvVotes.Text = "(from " + movie.vote_count.ToString() + " votes)";
+
 
             btnFav.Click += BtnFav_Click;
             btnPlay.Click += BtnPlay_Click;
 
-            MovieAPI api = new MovieAPI();
-            List<Movie> movies = await api.GetSimilar(movie.id);
-            int itemWidth = 100;
+            api = new MovieAPI();
 
-            MovieAdapter similarAdapter = new MovieAdapter(this, movies, itemWidth);
-            listSimilar.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
-            listSimilar.SetAdapter(similarAdapter);
+            SimilarMovies = await api.GetSimilar(movie.id);
+
+            RunOnUiThread(() =>
+            {
+                MovieAdapter similarAdapter = new MovieAdapter(this, SimilarMovies);
+                similarAdapter.ItemClick += SimilarAdapter_ItemClick;
+                listSimilar.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
+                listSimilar.SetAdapter(similarAdapter);
+            });
+            isFav = await datasource.IsFavorite(movie.id.ToString());
+
+        }
+
+        private void SimilarAdapter_ItemClick(object sender, int e)
+        {
+            Intent intent = new Intent(this, typeof(DetailActivity));
+            intent.PutExtra("movie", JsonConvert.SerializeObject(SimilarMovies[e]));
+            intent.AddFlags(ActivityFlags.ReorderToFront | ActivityFlags.ClearTop);
+            StartActivity(intent);
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            setBtnFavText();
+        }
+
+        private void setBtnFavText()
+        {
+            Log.Debug("SetFavText", "isFav = " + (isFav ? "true" : "false"));
+            if (isFav)
+            {
+                btnFav.Text = "Remove from Favorites";
+            }
+            else
+            {
+                btnFav.Text = "Save to Favorites";
+            }
         }
 
         private async void BtnPlay_Click(object sender, EventArgs e)
         {
             MovieAPI api = new MovieAPI();
-            List<Video> vids =  await api.GetVideos(movie.id);
+            List<Video> vids = await api.GetVideos(movie.id);
 
             if (vids == null || vids.Count == 0)
             {
@@ -109,19 +154,24 @@ namespace Smoovies
 
         private void BtnFav_Click(object sender, EventArgs e)
         {
-                ToggleFavorite(movie, !isFav);
+            ToggleFavorite(movie);
         }
 
-        private void ToggleFavorite(Movie movie, bool favorite)
+        private async void ToggleFavorite(Movie movie)
         {
-            if (favorite)
+            if (!isFav)
             {
                 //add to fav
+                string rs = await datasource.InsertFavorite(movie);
+                isFav = true;
             }
             else
             {
                 //remove from fav
+                string rs = await datasource.RemoveFavorite(movie);
+                isFav = false;
             }
+            setBtnFavText();
         }
     }
 }

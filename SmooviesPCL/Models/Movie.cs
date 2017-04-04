@@ -1,7 +1,12 @@
-﻿namespace SmooviesPCL.Models
+﻿using SQLite;
+
+namespace SmooviesPCL.Models
 {
+    [Table("Movie")]
     public class Movie
     {
+
+        [PrimaryKey, Column("_id")]
         public int id { get; set; }
         public int vote_count { get; set; }
         public float vote_average { get; set; }

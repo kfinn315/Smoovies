@@ -13,25 +13,32 @@ using Android.Content;
 using Android.Util;
 using Newtonsoft.Json;
 using Android.Support.V7.Widget;
+using SmooviesPCL;
+using System.Threading.Tasks;
 
 namespace Smoovies
 {
-    [Activity(Label = "HomeActivity", Icon = "@drawable/icon", Name = "com.Smoovies.HomeActivity", MainLauncher = true)]
+    [Activity(Label = "Home", Icon = "@drawable/icon", Name = "com.Smoovies.HomeActivity")]
     public class HomeActivity : Activity
     {
         private MovieAPI movieAPI;
 
-        List<Movie> nowMovies;
-        List<Movie> topMovies;
-        List<Movie> popMovies;
+        //List<Movie> nowMovies;
+        //List<Movie> topMovies;
+        //List<Movie> popMovies;
+        //List<Movie> favMovies;
 
         RecyclerView nowListView;
         RecyclerView topListView;
         RecyclerView popListView;
+        RecyclerView favListView;
 
         MovieAdapter nowAdapter;
         MovieAdapter topAdapter;
         MovieAdapter popAdapter;
+        MovieAdapter favAdapter;
+
+        FavoriteDatasource datasource;
 
         protected override async void OnCreate(Bundle bundle)
         {
@@ -46,15 +53,11 @@ namespace Smoovies
             topListView = this.FindViewById<RecyclerView>(Resource.Id.listTopRated);
             popListView = this.FindViewById<RecyclerView>(Resource.Id.listPopular);
             nowListView = this.FindViewById<RecyclerView>(Resource.Id.listNowPlaying);
+            favListView = this.FindViewById<RecyclerView>(Resource.Id.listFav);
 
-            topMovies = await movieAPI.GetTopRated();
-            popMovies = await movieAPI.GetPopular();
-            nowMovies = await movieAPI.GetNowPlaying();
-
-            int tileWidth = 1000;
-            topAdapter = new MovieAdapter(this, topMovies, tileWidth);
-            popAdapter = new MovieAdapter(this, popMovies, tileWidth);
-            nowAdapter = new MovieAdapter(this, nowMovies, tileWidth);
+            topAdapter = new MovieAdapter(this, MovieLists.TopMovies);
+            popAdapter = new MovieAdapter(this, MovieLists.PopMovies);
+            nowAdapter = new MovieAdapter(this, MovieLists.NowMovies);
 
             topListView.SetAdapter(topAdapter);
             popListView.SetAdapter(popAdapter);
@@ -68,35 +71,46 @@ namespace Smoovies
             topListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
             popListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
             nowListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
+
             
-            Log.Debug("Home", "Got newMovies: " + nowMovies.Count);
+            favAdapter = new MovieAdapter(this, MovieLists.FavMovies);
+            favListView.SetAdapter(favAdapter);
+            favAdapter.ItemClick += FavAdapter_ItemClick;
+            favListView.SetLayoutManager(new GridLayoutManager(this, 1, GridLayoutManager.Horizontal, false));
+
+            datasource = new FavoriteDatasource(Constants.dbFavPath);
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();            
+        }
+
+        private void FavAdapter_ItemClick(object sender, int e)
+        {
+            Intent intent = new Intent(this, typeof(DetailActivity));
+            intent.PutExtra("movie", JsonConvert.SerializeObject(MovieLists.FavMovies[e]));
+            StartActivity(intent);
         }
 
         private void TopAdapter_ItemClick(object sender, int e)
         {
             Intent intent = new Intent(this, typeof(DetailActivity));
-            intent.PutExtra("movie", JsonConvert.SerializeObject(topMovies[e]));
+            intent.PutExtra("movie", JsonConvert.SerializeObject(MovieLists.TopMovies[e]));
             StartActivity(intent);
         }
         private void PopAdapter_ItemClick(object sender, int e)
         {
             Intent intent = new Intent(this, typeof(DetailActivity));
-            intent.PutExtra("movie", JsonConvert.SerializeObject(popMovies[e]));
+            intent.PutExtra("movie", JsonConvert.SerializeObject(MovieLists.PopMovies[e]));
             StartActivity(intent);
         }
         private void NowAdapter_ItemClick(object sender, int e)
         {
             Intent intent = new Intent(this, typeof(DetailActivity));
-            intent.PutExtra("movie", JsonConvert.SerializeObject(nowMovies[e]));
+            intent.PutExtra("movie", JsonConvert.SerializeObject(MovieLists.NowMovies[e]));
             StartActivity(intent);
         }
-      
-        private List<Movie> GetSavedMovies()
-        {
-            return new List<Movie>();
-        }
     }
-
-
 }
 

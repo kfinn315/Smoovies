@@ -106,8 +106,8 @@ namespace Smoovies
 			// aapt resource value: 0x7f050002
 			public const int ivBG = 2131034114;
 			
-			// aapt resource value: 0x7f050015
-			public const int ivMovie = 2131034133;
+			// aapt resource value: 0x7f050017
+			public const int ivMovie = 2131034135;
 			
 			// aapt resource value: 0x7f050004
 			public const int ivPoster = 2131034116;
@@ -120,6 +120,9 @@ namespace Smoovies
 			
 			// aapt resource value: 0x7f050005
 			public const int linearLayout3 = 2131034117;
+			
+			// aapt resource value: 0x7f050014
+			public const int listFav = 2131034132;
 			
 			// aapt resource value: 0x7f050013
 			public const int listNowPlaying = 2131034131;
@@ -136,8 +139,11 @@ namespace Smoovies
 			// aapt resource value: 0x7f05000d
 			public const int llSimilar = 2131034125;
 			
-			// aapt resource value: 0x7f050014
-			public const int llTile = 2131034132;
+			// aapt resource value: 0x7f050016
+			public const int llTile = 2131034134;
+			
+			// aapt resource value: 0x7f050015
+			public const int progBar = 2131034133;
 			
 			// aapt resource value: 0x7f050008
 			public const int ratingScore = 2131034120;
@@ -180,7 +186,10 @@ namespace Smoovies
 			public const int ActivityHome = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int MovieTile = 2130903042;
+			public const int ActivitySplash = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int MovieTile = 2130903043;
 			
 			static Layout()
 			{

@@ -21,8 +21,7 @@ namespace Smoovies.Core
     {
         List<Movie> _movies;
         Context _context;
-        int _itemWidth;
-
+      
         public event EventHandler<int> ItemClick;
 
         public override int ItemCount
@@ -39,11 +38,10 @@ namespace Smoovies.Core
                 ItemClick(this, position);
         }
 
-        public MovieAdapter(Context context, List<Movie> movies, int itemWidth) : base()
+        public MovieAdapter(Context context, List<Movie> movies) : base()
         {
             _context = context;
             _movies = movies;
-            _itemWidth = itemWidth;
         }
 
 
@@ -79,9 +77,9 @@ namespace Smoovies.Core
             View itemView = LayoutInflater.From(_context).Inflate(Resource.Layout.MovieTile, parent, false);
 
             ImageView ivMovie = itemView.FindViewById<ImageView>(Resource.Id.ivMovie);
-            ViewGroup.LayoutParams llParams = ivMovie.LayoutParameters;
-            llParams.Width = _itemWidth;
-            ivMovie.LayoutParameters = llParams;
+            //ViewGroup.LayoutParams llParams = ivMovie.LayoutParameters;
+            //llParams.Width = (2*llParams.Height)/3
+            //ivMovie.LayoutParameters = llParams;
             MovieViewHolder vh = new MovieViewHolder(itemView, OnClick);
             return vh;
         }

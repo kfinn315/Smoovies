@@ -2,106 +2,116 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/linearLayout2">
+    <ImageView
+        android:id="@+id/ivBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/linearLayout1"
+      android:layout_margin="5dp">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/linearLayout2">
-        <ImageView
-            android:id="@+id/ivBG"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#888888"
-            android:scaleType="centerCrop" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/linearLayout1"
-        android:layout_margin="5dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/ivPoster"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".75"
-                android:adjustViewBounds="true"
-                android:background="#ffffff"
-                android:layout_margin="5px" />
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout3"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_margin="5px">
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Smoovie Explorer"
-                    android:textSize="30dp"
-                    android:paddingBottom="10dp" />
-                <TextView
-                    android:id="@+id/tvReleaseDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Release date"
-                    android:paddingBottom="10dp" />
-                <RatingBar
-                    android:id="@+id/ratingScore"
-                    android:max="10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:id="@+id/tvVotes"
-                    android:text="(from ??? votes)"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:paddingBottom="20px"
-                    android:layout_gravity="top" />
-                <Button
-                    android:text="Play Video"
-                    android:id="@+id/btnPlay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:text="Save to Favorites"
-                    android:id="@+id/btnFav"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </LinearLayout>
+        android:layout_height="wrap_content">
+      <smoovies.DynamicImageView
+          android:id="@+id/ivPoster"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="0.75"
+          android:adjustViewBounds="true"
+          android:background="#ffffff"
+          android:padding="5px"/>
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/linearLayout3"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:layout_margin="5px">
         <TextView
-            android:id="@+id/tvDescr"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movie"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:paddingBottom="10dp" />
+        <TextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Release date"
+            android:textColor="#ffffff"
+            android:paddingBottom="10dp" />
+        <RatingBar
+            android:id="@+id/ratingScore"
+            android:clickable="false"
+            android:numStars="5"
+            android:stepSize=".1"
+            android:isIndicator="true"            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:max="5"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator" />
+        <TextView
+            android:id="@+id/tvVotes"
+            android:text="(from ??? votes)"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_gravity="top|left"
-            android:layout_margin="5px"
-            android:padding="20px" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="300px"
-            android:orientation="horizontal"
-            android:id="@+id/llSimilar"
-            android:layout_margin="5px">
-            <TextView
-                android:id="@+id/tvSimilar"
-                android:text="Similar Movies"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/listSimilar"
-                android:scrollbars="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-        </LinearLayout>
+            android:textColor="#ffffff"
+            android:paddingBottom="20px"
+            android:layout_gravity="top" />
+        <Button
+            android:text="Play Video"
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="Save to Favorites"
+            android:id="@+id/btnFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+      </LinearLayout>
     </LinearLayout>
+    <TextView
+        android:id="@+id/tvDescr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="top|left"
+                    android:textColor="#ffffff"
+        android:layout_margin="5px"
+        android:padding="20px" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:orientation="vertical"
+        android:id="@+id/llSimilar"
+        android:layout_margin="5px">
+      <TextView
+          android:id="@+id/tvSimilar"
+          android:text="Similar Movies"
+          android:textColor="#ffffff"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/listSimilar"
+          android:scrollbars="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1" />
+    </LinearLayout>
+  </LinearLayout>
 </FrameLayout>
